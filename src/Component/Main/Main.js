@@ -14,7 +14,7 @@ const Main = () => {
     const handleButton = (second) => { 
      setSeconds(seconds + second)
     }
-  console.log(seconds)
+
     return (
         <div className='main'>
             <SectionL items={items} handle={handleButton}></SectionL>
