@@ -1,0 +1,65 @@
+.right-sight{
+     padding: 20px;
+    /* box-shadow: 2px 3px 4px rgb(179, 176, 176); */
+    position: sticky;
+    
+}
+.user-info{
+    background-color: goldenrod;
+    border-radius: 8px;
+    padding:20px ;
+    line-height: 10px;
+}
+.user{
+    font-size: 25px;
+    font-weight: 800;
+}
+.users-work{
+    color: rgb(218, 206, 206);
+}
+.user-in{
+    color: rgb(218, 206, 206);
+}
+.btn-div{
+    padding: 5px;
+    background-color: beige;
+    border-radius: 8px;
+    margin: 20px;
+    text-align: center;
+}
+.btn-div button{
+padding: 8px;
+margin: 10px;
+background-color: white;
+border: none;
+border-radius: 50%;
+font-weight: 600;
+}
+.btn-div button:hover{
+    background-color: aqua;
+}
+.time{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    background-color:beige ;
+    border-radius: 10px;
+    margin: 20px;
+}
+.time p{
+    color: rgb(163, 163, 241);
+}
+.activity-btn{
+    background-color: rgb(57, 165, 168);
+    border: none;
+    padding: 17px 70px;
+    color: white;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+
+}
+.div-btn{
+    text-align:  center;
+}
