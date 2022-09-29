@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './SectionR.css'
+import { ToastContainer, toast } from 'react-toastify';
+ import 'react-toastify/dist/inject-style';
+
 
 const SectionR = ({seconds}) => {
     const [breaks, setBreaks] = useState(0);
@@ -10,7 +13,9 @@ const SectionR = ({seconds}) => {
         const localbreak = localStorage.getItem('seconds')
         setBreaks(localbreak)
    }
-    
+    const handletoast = () => {
+        toast('wow so easy')
+    }
 
 
     return (
@@ -37,7 +42,7 @@ const SectionR = ({seconds}) => {
                 <p>{breaks} seconds</p>
             </div>
             <div className='div-btn'>
-                 <button className='activity-btn'>Activity Complete</button>
+                 <button className='activity-btn' onClick={handletoast}>Activity Complete</button>
            </div>
             
         </div>
