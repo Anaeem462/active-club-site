@@ -15,7 +15,7 @@ const SectionR = ({seconds}) => {
         setBreaks(localbreak)
    }
     const handletoast = () => {
-        toast('wow so easy')
+        toast('Activate Complete')
     }
 
 
