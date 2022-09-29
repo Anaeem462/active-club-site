@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './SectionR.css'
 
 const SectionR = ({seconds}) => {
     const [breaks, setBreaks] = useState(0);
-    localStorage.setItem('seconds',breaks)
+    
+    if (breaks) {
+          localStorage.setItem('seconds', breaks)
+    } else {
+        const localbreak = localStorage.getItem('seconds')
+        setBreaks(localbreak)
+   }
+    
+
 
     return (
         <div className='right-sight'>
