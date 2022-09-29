@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './SectionR.css'
-import { ToastContainer, toast } from 'react-toastify';
- import 'react-toastify/dist/inject-style';
+  import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const SectionR = ({seconds}) => {
