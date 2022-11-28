@@ -7,20 +7,27 @@ import './SectionR.css'
 
 const SectionR = ({seconds}) => {
     const [breaks, setBreaks] = useState(0);
+  
+    const localBreaks = localStorage.getItem('seconds')
     
-    if (breaks) {
-          localStorage.setItem('seconds', breaks)
-    } else {
-        const localbreak = localStorage.getItem('seconds')
-        setBreaks(localbreak)
-   }
+    if(breaks){
+        localStorage.setItem('seconds',breaks)  
+    }else if(localBreaks){
+        setBreaks(localBreaks)
+    }
+//  
+
+    const breakHandler = (point)=>{
+            setBreaks(point)
+            
+    }
     const handletoast = () => {
         toast('Activate Complete')
     }
 
 
     return (
-        <div className='right-sight'>
+        <div className='cart'>
             <div className='user-info'>
                 <p className='user'>Abdullah Naeem</p>
                 <p className='users-work'>Programming-hero-students</p>
@@ -28,10 +35,10 @@ const SectionR = ({seconds}) => {
             </div>
             <h3>Add A Break</h3>
             <div className='btn-div'>
-                <button className='first-btn' onClick={()=>setBreaks(10)}>10s</button>
-                <button className='second-btn' onClick={()=>setBreaks(20)}>20s</button>
-                <button className='third-btn' onClick={()=>setBreaks(30)}>30s</button>
-                <button className='fourth-btn'onClick={()=>setBreaks(40)}>40s</button>
+                <button className='first-btn' onClick={()=>breakHandler(10)}>10s</button>
+                <button className='second-btn' onClick={()=>breakHandler(20)}>20s</button>
+                <button className='third-btn' onClick={()=>breakHandler(30)} >30s</button>
+                <button className='fourth-btn' onClick={()=>breakHandler(40)}>40s</button>
             </div>
             <h3>Details of Exercise :</h3>
             <div className='time'>

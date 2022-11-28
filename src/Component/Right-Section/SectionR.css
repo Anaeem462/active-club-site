@@ -1,8 +1,6 @@
-.right-sight{
-    border: 2px solid red;
-    padding: 20px;
-    margin-right: 20px;
-    
+.cart{
+    position: sticky;
+    top: 10px;
 }
 .user-info{
     background-color: goldenrod;
@@ -64,6 +62,7 @@ font-weight: 600;
     border-radius: 8px;
     font-size: 17px;
     font-weight: 600;
+   
 
 }
 .div-btn{

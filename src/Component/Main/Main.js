@@ -4,21 +4,33 @@ import SectionL from '../Left-Section/SectionL'
 import SectionR from '../Right-Section/SectionR'
 const Main = () => {
     const [items, setItems] = useState([])
+    const [seconds,setSeconds]=useState(0)
+
     useEffect(() => {
-        fetch('Active-items.json')
-            .then(res => res.json())
+        fetch('activeitems.json')
+        .then(res => res.json())
         .then(data=>setItems(data))
     }, [])
-    const [seconds,setSeconds]=useState(0)
+    
+    
   
-    const handleButton = (second) => { 
-     setSeconds(seconds + second)
+    const handleButton = (second) => {
+        setSeconds(seconds + second)
     }
 
     return (
         <div className='main'>
-            <SectionL items={items} handle={handleButton}></SectionL>
-            <SectionR seconds ={seconds}></SectionR>
+            <div className='left-side'>
+            {
+                items.map(item=><SectionL item={item} key={item.id} handleButton={handleButton}></SectionL>)
+            }
+
+            </div>
+            <div className='right-sight'>
+                 <SectionR seconds={seconds}></SectionR>
+            </div>
+           
+           
         </div>
     );
 };

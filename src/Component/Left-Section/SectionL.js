@@ -1,18 +1,17 @@
 import React from 'react';
-import Item from '../Item/Item';
 import './SectionL.css'
 
-const SectionL = ({items,handle}) => {
-    
+const SectionL = ({item,handleButton}) => {
+
+    const { img, name, seconds } = item
     return (
-        <div className='left-side'>
-        {
-                items.map(item => <Item
-                    item={item}
-                    key={item.id}
-                    handle={handle}
-                ></Item>)   
-        }
+            <div className='card'>
+            <img className='images' src={img} alt="" />
+            <div className='item-info'>
+            <h1 className='items-name'>{name}</h1>
+            <h5 className='seconds'>Time: {seconds}S</h5>
+            </div>
+             <button className='active-btn' onClick={()=>handleButton(seconds)}>Active </button>
         </div>
     );
 };
